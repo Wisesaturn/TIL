@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ThisisRealname from './App';
+// TheisRealname 부분으로 이름 지정
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThisisRealname />
   </React.StrictMode>,
   document.getElementById('root')
 );
