@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwisesaturn_til=self.webpackChunkwisesaturn_til||[]).push([[9477],{4694:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/TIL/blog/tags/facebook","allTagsPath":"/TIL/blog/tags","count":1}')}}]);

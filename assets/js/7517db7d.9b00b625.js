@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwisesaturn_til=self.webpackChunkwisesaturn_til||[]).push([[9414],{8935:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/TIL/blog/tags/hola","allTagsPath":"/TIL/blog/tags","count":1}')}}]);

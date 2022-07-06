@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwisesaturn_til=self.webpackChunkwisesaturn_til||[]).push([[9952],{2554:s=>{s.exports=JSON.parse('{"permalink":"/TIL/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
