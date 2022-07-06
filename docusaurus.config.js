@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'JaeHan TIL',
-  tagline: 'TIL is the best choice',
+  title: 'TIL',
+  tagline: `제가 직접 공부한 내용들을 정리해보았습니다.`,
   url: 'https://wisesaturn.github.io',
   baseUrl: '/TIL/',
   onBrokenLinks: 'throw',
@@ -26,6 +26,8 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  plugins: ['docusaurus-plugin-sass'],
 
   presets: [
     [
@@ -47,7 +49,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -57,9 +59,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Jaehan TIL',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'JaeHan TIL Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -67,11 +69,10 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Javascript',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/wisesaturn',
             label: 'GitHub',
             position: 'right',
           },
@@ -84,25 +85,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Javascript',
+                to: '/docs/javascript',
               },
             ],
           },
@@ -111,16 +95,16 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://wisesaturn.github.io/blog',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/wisesaturn',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Jaehan's TIL, Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
