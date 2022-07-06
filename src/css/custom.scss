@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Apple';
+  src: url('../font/AppleSDGothicNeoB.ttf') format('truetype');
+  src: url('../font/AppleSDGothicNeoEB.ttf') format('truetype');
+  src: url('../font/AppleSDGothicNeoH.ttf') format('truetype');
+  src: url('../font/AppleSDGothicNeoL.ttf') format('truetype');
+  src: url('../font/AppleSDGothicNeoM.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Apple';
+}
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;

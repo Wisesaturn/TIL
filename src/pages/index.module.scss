@@ -1,14 +1,16 @@
-.container {
-  h1 {
-    font-size : 2rem;
-  }
-}
-
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  h1 {
+    font-size : 4rem;
+  }
+
+  p {
+    font-size : 1.4rem;
+  }
 }
 
 @media screen and (max-width: 996px) {
