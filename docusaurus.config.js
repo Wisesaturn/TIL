@@ -129,4 +129,11 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = {
+  // ...
+  url: 'https://wisesaturn.github.io', // GitHub organization 또는 username + github.io
+  baseUrl: '/TIL/',
+  projectName: 'TIL',
+  organizationName: 'wisesaturn', // GitHub organization 또는 username
+  // ...
+};
