@@ -11,6 +11,13 @@ body {
   font-family: 'Apple';
 }
 
+.navbar__inner {
+  a {
+    --ifm-navbar-item-padding-vertical: 0rem;
+    padding-top: .25rem !important;
+  }
+}
+
 :root {
   --ifm-color-primary: #2883df;
   --ifm-color-primary-dark: #2576c8;
@@ -24,7 +31,7 @@ body {
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #28a8df;
+  --ifm-color-primary: #28bedf;
   --ifm-color-primary-dark: #269ed2;
   --ifm-color-primary-darker: #2595c4;
   --ifm-color-primary-darkest: #2185af;

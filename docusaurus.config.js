@@ -27,7 +27,10 @@ const config = {
     locales: ['en', 'ko'],
   },
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    'docusaurus-plugin-sass',
+  ],
 
   presets: [
     [
@@ -46,7 +49,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Jaehan TIL',
+        title: 'Jaehan의 TIL',
         logo: {
           alt: 'JaeHan TIL Logo',
           src: 'img/logo.svg',
@@ -58,8 +61,8 @@ const config = {
             position: 'left',
             label: 'Test',
           },
-          {
-            href: 'https://github.com/wisesaturn',
+          { 
+            to: 'https://github.com/wisesaturn', 
             label: 'GitHub',
             position: 'right',
           },
