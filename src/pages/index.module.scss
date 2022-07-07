@@ -1,4 +1,9 @@
-.heroBanner {
+main {
+  text-align : center;
+  align-items : center;
+}
+
+.Banner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -14,7 +19,7 @@
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
+  .Banner {
     padding: 2rem;
   }
 }

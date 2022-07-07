@@ -2,4 +2,4 @@ declare module '*.scss' {
     const content: { [className: string]: string };
     export default content;
 }
-// scss 설정용
+// scss typescript 충돌 방지

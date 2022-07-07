@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={styles.heroBanner}>
+    <header className={styles.Banner}>
       <div className="container">
         <h1>{siteConfig.title}</h1>
         <p>{siteConfig.tagline}</p>
@@ -19,11 +19,11 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-
+        <img src="img/Jaehan.png"/>
       </main>
     </Layout>
   );

@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TIL',
+  title: 'Jaehan TIL',
   tagline: `제가 직접 공부한 내용들을 정리해보았습니다.`,
   url: 'https://wisesaturn.github.io',
   baseUrl: '/TIL/',
@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['en', 'ko'],
   },
 
   plugins: ['docusaurus-plugin-sass'],
@@ -34,22 +34,9 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        
         theme: {
-          customCss: require.resolve('./src/css/custom.scss'),
+          customCss: require.resolve('./src/css/global.scss'),
         },
       }),
     ],
@@ -69,7 +56,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Javascript',
+            label: 'Test',
           },
           {
             href: 'https://github.com/wisesaturn',
@@ -79,14 +66,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'Study',
             items: [
               {
-                label: 'Javascript',
-                to: '/docs/javascript',
+                label: 'test',
+                to: '/docs/intro',
               },
             ],
           },
