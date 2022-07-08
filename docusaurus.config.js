@@ -50,10 +50,6 @@ const config = {
     ({
       navbar: {
         title: 'Jaehan의 TIL',
-        logo: {
-          alt: 'JaeHan TIL Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'doc',

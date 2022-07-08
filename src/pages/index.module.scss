@@ -6,7 +6,7 @@ main {
 }
 
 .Banner {
-  padding: 4rem 0;
+  padding: 4rem 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -22,6 +22,6 @@ main {
 
 @media screen and (max-width: 996px) {
   .Banner {
-    padding: 2rem;
+    padding: 3rem;
   }
 }
