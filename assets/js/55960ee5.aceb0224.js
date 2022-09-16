@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwisesaturn_til=self.webpackChunkwisesaturn_til||[]).push([[121],{8070:e=>{e.exports=JSON.parse('[{"label":"programmers","permalink":"/TIL/docs/tags/programmers","count":1},{"label":"Level 1","permalink":"/TIL/docs/tags/level-1","count":1}]')}}]);
