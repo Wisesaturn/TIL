@@ -85,6 +85,10 @@ const config = {
             title: 'More',
             items: [
               {
+                label: 'docusaurus Docs',
+                to: 'https://docusaurus.io/docs',
+              },
+              {
                 label: 'Blog',
                 to: 'https://wisesaturn.github.io/blog',
               },
