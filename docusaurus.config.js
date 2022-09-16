@@ -21,7 +21,7 @@ const config = {
   // internalization
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko'],
+    locales: ['ko']
   },
 
   plugins: [
@@ -58,7 +58,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: '/category/coding-gtest',
+            docId: '/category/coding-test',
             position: 'left',
             label: 'Coding Test',
           },
