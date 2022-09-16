@@ -12,15 +12,13 @@ const config = {
   baseUrl: '/TIL/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+//favicon: '', (아이콘)
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
+ // Github Repository
   organizationName: 'wisesaturn', // Usually your GitHub org/user name.
   projectName: 'TIL', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // internalization
   i18n: {
     defaultLocale: 'ko',
     locales: ['en', 'ko'],
@@ -49,12 +47,20 @@ const config = {
     ({
       navbar: {
         title: 'Jaehan의 TIL',
+        // logo: {
+        //   alt: 'Site Logo',
+        //   src: 'img/Mogakso.png',
+        //   href: 'https://MoGakSo-Ajou.github.io/jaehan/',
+        //   target: '_self',
+        //   width: 32,
+        //   height: 32,
+        // },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'CodingTest/index',
             position: 'left',
-            label: 'Test',
+            label: 'Coding Test',
           },
           { 
             to: 'https://github.com/wisesaturn', 
@@ -70,8 +76,8 @@ const config = {
             title: 'Study',
             items: [
               {
-                label: 'test',
-                to: '/docs/intro',
+                label: 'MoGakSo',
+                to: 'https://mogakso-ajou.github.io/jaehan/',
               },
             ],
           },

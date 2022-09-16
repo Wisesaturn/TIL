@@ -1,7 +1,7 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import styles from './index.module.scss';
+import styles from '../css/index.module.scss';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
