@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+title: "다음 큰 숫자"
+date: "2022-10-05 23:07:00"
+tags: ["programmers", "Level 2"]
+categories: "Programmers"
+---
+
+## 📒 문제 설명
+
+> https://school.programmers.co.kr/learn/courses/30/lessons/12911
+
+## 💻 언어
+
+`C++`
+
+---
+
+## 풀이
+
+1. 처음에 **n을 2진수로 변환**하여 1의 갯수를 파악한다 (**함수 선언**)
+2. `n+1`부터 시작하여 수를 늘려간다.
+   > 이 때, **n을 함수에 대입한 값**과 같아질 때까지 늘려간다.
+3. 구한 값을 `return`한다.
+
+### 관련 알고리즘
+
+> `-`
+
+---
+
+## 사고 과정
+
+### 📌 특정 숫자를 2진수로 변환
+
+1. **특정 입력값**을 2진수로 변환한다.
+2. 이 때, `나누기`와 `나머지` 연산을 활용한다.
+   - 나머지가 1일 때, 1의 갯수를 **카운팅**한다.
+3. 1이 남을 때까지 연산은 지속되며, 연산 종료 후 카운팅한 값을 `return`한다.
+
+### 📌 n+1부터 1의 갯수 파악
+
+1. **n+1**부터 1의 갯수를 파악한다.
+   - 함수로 만들어놓았으므로 **if 조건문**내에서 `++연산`을 활용해 효율적으로 작성한다.
+2. 1의 갯수가 같다면 그 값을 `return`한다.
+
+## 결과
+
+```cpp
+#include <string>
+#include <vector>
+
+using namespace std;
+
+ // 0. 2진수로 변환하여 1의 갯수를 파악하는 함수를 만든다.
+int func(int n) {
+    int count = 0;
+
+    do {
+        if (n % 2 != 0)
+            count++;
+        n /= 2;
+    } while(n >= 1);
+
+    return count;
+}
+
+int solution(int n) {
+    // 1. n의 1의 갯수를 파악한다.
+    int correct = func(n);
+    // 2. n+1부터 시작하여 수를 늘려간다.
+    // 이 때, 1번에서 계산했던 갯수가 같아질 때까지 늘려간다.
+    while(true) {
+        if (correct == func(++n)) {
+            // 3. 2번 과정에서 구한 값을 return
+            return n;
+        }
+    }
+}
+```
