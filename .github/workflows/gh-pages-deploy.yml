@@ -5,20 +5,29 @@ on:
     branches: [main]
 
 jobs:
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+  deploy:
+    runs-on: ubuntu-latest
 
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16.15.1
-        cache: npm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Npm install
-      run: npm install --quiet
-      shell: bash
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.1
+          cache: npm
 
-    - name: Deploy
-      run: npm run deploy
-      shell: bash
+      - name: Npm install
+        run: npm install --quiet
+        shell: bash
+
+      - name: build
+        run: npm run build
+        shell: bash
+
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_TOKEN }}
+          publish_dir: build
