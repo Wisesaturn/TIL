@@ -62,6 +62,12 @@ const config = {
             position: 'left',
             label: 'Coding Test',
           },
+          {
+            type: 'doc',
+            docId: '/category/cs',
+            position: 'left',
+            label: 'CS',
+          },
           { 
             to: 'https://github.com/wisesaturn', 
             label: 'GitHub',
