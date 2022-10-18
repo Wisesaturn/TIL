@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/TIL/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-//favicon: '', (아이콘)
+  favicon: 'img/favicon.ico',
 
  // Github Repository
   organizationName: 'wisesaturn', // Usually your GitHub org/user name.
@@ -47,14 +47,14 @@ const config = {
     ({
       navbar: {
         title: 'Jaehan의 TIL',
-        // logo: {
-        //   alt: 'Site Logo',
-        //   src: 'img/Mogakso.png',
-        //   href: 'https://MoGakSo-Ajou.github.io/jaehan/',
-        //   target: '_self',
-        //   width: 32,
-        //   height: 32,
-        // },
+        logo: {
+          alt: 'Site Logo',
+          src: 'img/books.png',
+          href: 'https://wisesaturn.github.io/TIL/',
+          target: '_self',
+          width: 32,
+          height: 32,
+        },
         items: [
           {
             type: 'doc',
