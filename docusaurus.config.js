@@ -24,6 +24,8 @@ const config = {
     locales: ['ko']
   },
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   plugins: [
     require.resolve('docusaurus-lunr-search'),
     'docusaurus-plugin-sass',
@@ -58,15 +60,21 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: '/category/cs',
+            position: 'left',
+            label: 'CS',
+          },
+          {
+            type: 'doc',
             docId: '/category/coding-test',
             position: 'left',
             label: 'Coding Test',
           },
           {
             type: 'doc',
-            docId: '/category/cs',
+            docId: '/category/frontend',
             position: 'left',
-            label: 'CS',
+            label: 'Frontend',
           },
           { 
             to: 'https://github.com/wisesaturn', 

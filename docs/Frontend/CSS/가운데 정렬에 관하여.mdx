@@ -1,0 +1,537 @@
+---
+sidebar_position: 2
+title: "가운데 정렬에 관하여"
+date: "2022-10-24 12:29:00"
+tags: ["CSS", "Study", "Frontend"]
+categories: "CSS"
+---
+
+:::info
+
+**CSS**를 통해 해당 영역을 정렬하는 법을 정리해보았습니다.
+
+:::
+
+---
+
+## 📏 수직 가운데 정렬
+
+### 📎 margin : 0 auto;
+
+:::note
+
+- **marign**을 이용하여 양쪽 여백을 **auto**를 두어 브라우저에서 자동으로 잡아주게끔 합니다.
+- `<div>` 태그와 같이 **감싸주는 태그 (block 영역의 태그)** 내에서 **margin : 0 auto;**를 사용해야 합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+    margin: "0 auto",
+  };
+
+  const styleP = { textIndent: "0px", lineHeight: "1rem", margin: "0 auto" };
+
+  const styleImg = { width: "200px", height: "200px", margin: "0 auto" };
+
+  return (
+    <>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </>
+  );
+}
+```
+
+### 📎 justify-content : center;
+
+:::note
+
+- `display : flex`와 `justify-content`를 이용하여 **수직 가운데 정렬**을 맞춰줍니다.
+- `flex-direction`이 **row**일 때만 가능합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#eeeeee",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  const styleImg = { width: "200px", height: "200px" };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+### 📎 align-items : center;
+
+:::note
+
+- `display : flex`와 `align-items`를 이용하여 **수직 가운데 정렬**을 맞춰줍니다.
+- **flex** 방향이 세로 방향일 때 가능합니다.
+- `align-self` 속성을 통해 특정 영역을 따로 정할 수 있습니다.
+  > `align-self`가 `align-items`보다 우선적으로 스타일이 적용됩니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#eeeeee",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  const styleImg = { width: "200px", height: "200px" };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+### 📎 text-align : center;
+
+:::note
+
+- **text-align**을 이용하여 **텍스트 태그 (inline 영역의 태그)**를 가운데 정렬을 도와줍니다.
+- 이 외의 **블록 영역의 태그**는 동작하지 않습니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+    textAlign: "center",
+  };
+
+  const styleP = { textIndent: "0px", lineHeight: "1rem", textAlign: "center" };
+
+  const styleImg = { width: "200px", height: "200px", textAlign: "center" };
+
+  return (
+    <>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </>
+  );
+}
+```
+
+---
+
+## 📏 수평 가운데 정렬
+
+### 📎 vertical-align : middle;
+
+:::note
+
+- **inline 요소**를 가운데 정렬할 때 사용합니다.
+- 부모 요소에 따라 정렬 방식이 달라지며, `<div>` 태그와 같은 요소는 적용되지 않습니다.
+- **상대적인 정렬방식**이라 어려운 방법에 속합니다.
+  > `line-height`, `font-size` 등 인라인에 속한 다른 요소들에 따라 정렬이 변합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    display: "inline-block",
+    width: "100%",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    verticalAlign: "middle",
+    fontSize: "30px",
+  };
+
+  const styleP2 = {
+    textIndent: "0px",
+    verticalAlign: "middle",
+    fontSize: "80px",
+    color: "#999",
+    paddingRight: "1rem",
+  };
+
+  return (
+    <div style={absolute}>
+      <span style={styleP2}>기준</span>
+      <span style={styleP}>이것은 문장입니다.</span>
+    </div>
+  );
+}
+```
+
+### 📎 padding
+
+:::note
+
+- `padding` 값을 이용하여 **수평 가운데 정렬**을 하듯이 보여줄 수 있습니다.
+  - 실제로는 **수평 가운데 정렬**이 아닌 위아래 여백을 추가해주었습니다.
+  - 이는 내용에 따라 정렬여부가 달라집니다.
+    > `<div>` 태그는 `margin`을 사용해야 합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const styleDiv = {
+    width: "200px",
+    height: "400px",
+    backgroundColor: "#1a70d2",
+    padding: "1rem 0",
+  };
+
+  return (
+    <>
+      <div style={styleDiv}></div>
+    </>
+  );
+}
+```
+
+```jsx live
+function CenterAlign(props) {
+  const styleP = { textIndent: "0px", lineHeight: "1rem", padding: "1rem 0" };
+
+  return (
+    <>
+      <p style={styleP}>이것은 문장입니다.</p>
+    </>
+  );
+}
+```
+
+```jsx live
+function CenterAlign(props) {
+  const styleImg = { width: "200px", height: "200px", padding: "1rem 0" };
+
+  return (
+    <>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </>
+  );
+}
+```
+
+### 📎 line-height = height;
+
+:::note
+
+- **텍스트 한 줄**에 한해서 **수평 가운데 정렬**이 가능합니다.
+- `text-align : center;`를 통해 **수직 가운데 정렬** 후 `line-height`를 통해서 줄간격을 강제로 height와 같게 만들어줍니다.
+- `line-height` 값은 **부모요소의 height** 값을 따르면 됩니다.
+  - 혹은, 자기 자체의 `height`값을 `line-height` 값과 동일하게 설정하면 됩니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "200px",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "200px",
+  };
+
+  return (
+    <div style={absolute}>
+      <p style={styleP}>이것은 문장입니다.</p>
+    </div>
+  );
+}
+```
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    height: "200px",
+    lineHeight: "200px",
+  };
+
+  return (
+    <div style={absolute}>
+      <p style={styleP}>이것은 문장입니다.</p>
+    </div>
+  );
+}
+```
+
+### 📎 align-items : center;
+
+:::note
+
+- `display : flex`와 `align-items`를 이용하여 **수평 가운데 정렬**을 맞춰줍니다.
+- `align-self` 속성을 통해 특정 영역을 따로 정할 수 있습니다.
+  > `align-self`가 `align-items`보다 우선적으로 스타일이 적용됩니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#eeeeee",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  const styleImg = { width: "200px", height: "200px" };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+---
+
+## 📏 수직/수평 가운데 정렬
+
+### 📎 translate: transform(-50%, -50%);
+
+:::note
+
+- `position` 값을 이용해 브라우저 내에서 위치를 잡아줍니다.
+- **top과 left값**을 **50%**를 우선 맞춰준 후, 기준점으로 정렬하기 위해 **transform**을 이용합니다.
+- **블록 영역 및 인라인 영역의 태그** 모두 동작합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "600px",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+    </div>
+  );
+}
+```
+
+:::caution
+
+- **텍스트 영역**은 가운데 정렬이 맞춰지나, **텍스트 자체의 정렬**이 필요합니다.
+- `text-align : center`를 추가해야 합니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "300px",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
+  return (
+    <div style={absolute}>
+      <p style={styleP}>이것은 문장입니다.</p>
+    </div>
+  );
+}
+```
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    width: "100%",
+    height: "600px",
+    backgroundColor: "#eeeeee",
+  };
+
+  const styleImg = {
+    width: "200px",
+    height: "200px",
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
+  return (
+    <div style={absolute}>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+### 📎 justify-content + align-items
+
+:::note
+
+- `display : flex`를 이용해 **수직 가운데 정렬**과 **수평 가운데 정렬**을 진행합니다.
+- **수직 가운데 정렬**은 `justify-content : center`, **수평 가운데 정렬**은 `align-items : center`를 통해 이루어집니다.
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    display: "flex",
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#eeeeee",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  const styleImg = {
+    width: "200px",
+    height: "200px",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+---
+
+## 🧾 정리
+
+- **block 요소**는 `margin, width, height`이 적용되는 반면, **inline 요소**는 **그렇지 않다**는 점을 인지해야 합니다.
+- 특정 태그에 직접 정렬을 하는 것보단, 감싸는 태그를 이용하여 정렬하는 방식에 익숙해져야 합니다.
+  > 실제로 특정 태그에 직접 정렬하는 경우는 `text-align`만 대표적입니다.
+- 대부분 **가운데 정렬**을 할 땐, `display : flex`를 이용하는 것이 좋습니다.
+  - `justify-content : center`와 `align-items : center`를 이용합니다.
+  - 웬만한 경우라면 **대부분 정렬이 가능**합니다.
+- **position**과 **transform**을 이용한 가운데 정렬은 **주변 영역에 구애받지 않을 때** 사용하면 좋습니다.
+  - **position**을 통하여 위치를 강제로 기준을 정하고, 임의값으로 위치를 정할 수 있기 때문입니다.
+  - **텍스트 자체의 정렬**은 적용되지 않습니다.
