@@ -522,6 +522,82 @@ function CenterAlign(props) {
 }
 ```
 
+### 📎 place-items : center;
+
+:::note
+
+- `display : grid`를 이용해 규격화하여 가운데 정렬을 해줍니다.
+- **place-items**를 이용하여 **center**에 맞춰줍니다.
+
+:::
+
+:::info
+
+`place-items` = `align-items` + `justify-items`
+
+:::
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    display: "grid",
+    width: "100%",
+    height: "1000px",
+    backgroundColor: "#eeeeee",
+    placeItems: "center",
+  };
+  const styleImg = {
+    width: "200px",
+    height: "200px",
+  };
+
+  const styleP = {
+    textIndent: "0px",
+    lineHeight: "1rem",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+      <p style={styleP}>이것은 문장입니다.</p>
+      <img
+        style={styleImg}
+        src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU"></img>
+    </div>
+  );
+}
+```
+
+```jsx live
+function CenterAlign(props) {
+  const absolute = {
+    display: "grid",
+    width: "100%",
+    height: "400px",
+    backgroundColor: "#eeeeee",
+    placeItems: "center",
+  };
+
+  const styleDiv = {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "#1a70d2",
+  };
+
+  return (
+    <div style={absolute}>
+      <div style={styleDiv}></div>
+    </div>
+  );
+}
+```
+
 ---
 
 ## 🧾 정리
@@ -535,3 +611,4 @@ function CenterAlign(props) {
 - **position**과 **transform**을 이용한 가운데 정렬은 **주변 영역에 구애받지 않을 때** 사용하면 좋습니다.
   - **position**을 통하여 위치를 강제로 기준을 정하고, 임의값으로 위치를 정할 수 있기 때문입니다.
   - **텍스트 자체의 정렬**은 적용되지 않습니다.
+- `display : grid`를 이용해 가운데 정렬을 만들 수 있으며, 좀더 **규격화된 홈페이지**를 만들 때 유용합니다.
