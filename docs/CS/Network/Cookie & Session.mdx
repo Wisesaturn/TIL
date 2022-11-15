@@ -38,7 +38,7 @@ HTTP 프로토콜은 일반적으로 **Connectionless, Stateless**한 환경입�
 #### `Client` Browser 내에 저장되는 데이터 파일
 
 - **key, value, expired, ,domain, path**로 정보가 이루어져 있다.
-- 브라우저가 종료되어도 데이터를 갖고 있어 인증이 유지된다.
+- 브라우저가 종료되어도 쿠키 만료시간이 지나지 않았다면, 데이터를 갖고 있어 인증이 유지된다.
 - 하나의 **Cookie**는 **4KB**까지 저장이 가능하다.
 - `Client`에 **300개**까지 저장할 수 있으며, 하나의 `Domain`당 20개의 값만 가질 수 있다.
 - 쿠키는 사용자가 따로 요청하지 않아도 **Browser**가 **Request**시 **Request Header**에 넣어서 자동으로 서버에 전송한다.
@@ -73,6 +73,13 @@ HTTP 프로토콜은 일반적으로 **Connectionless, Stateless**한 환경입�
 
 1. `Client`가 `Server`에 접속 시 `Session ID` 발급
 2. `Client`는 `Session ID`를 Cookie를 이용해 가지고 있음
-3. `Server`에 요청할 때 `Session ID`를 같이 서버에 `HTTP Header`에 equest
+3. `Server`에 요청할 때 `Session ID`를 같이 서버에 `HTTP Header`에 request
 4. `Server`는 `Session ID`를 전달받아 `Session`에 있는 `Client` 정보를 사용
 5. `Server` 요청을 처리 후 `Client`에 응답
+
+:::caution
+
+- **쿠키**와 **세션** 둘의 과정을 비교한 것입니다.
+- **세션** 역시 **쿠키**를 사용하므로 종류를 구분하기보단 정보를 다루는 **방식의 차이**라고 보는 게 편합니다.
+
+:::
