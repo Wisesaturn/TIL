@@ -66,9 +66,9 @@ const config = {
           },
           {
             type: 'doc',
-            docId: '/category/coding-test',
+            docId: '/category/algorithm',
             position: 'left',
-            label: 'Coding Test',
+            label: 'Algorithm',
           },
           {
             type: 'doc',
