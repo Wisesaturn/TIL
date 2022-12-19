@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwisesaturn_til=self.webpackChunkwisesaturn_til||[]).push([[136],{9173:t=>{t.exports=JSON.parse('{"title":"Algorithm","slug":"/category/algorithm","permalink":"/TIL/docs/category/algorithm","navigation":{"next":{"title":"\ud504\ub85c\uadf8\ub798\uba38\uc2a4","permalink":"/TIL/docs/category/\ud504\ub85c\uadf8\ub798\uba38\uc2a4"}}}')}}]);
